@@ -7,7 +7,7 @@ import CustomerReview from '../CustomerReview/CustomerReview';
 
 const Home = () => {
     return (
-        <div classNameName=''>
+        <div className='home'>
             <Banner></Banner>
             <ChefContainer></ChefContainer>
             <BestRecipe></BestRecipe>
@@ -17,3 +17,8 @@ const Home = () => {
 };
 
 export default Home;
+// style={{backgroundImage: `url(../../../../public/assets/icons/Gusto Restaurant Front View.png)`,
+//         backgroundRepeat: 'no-repeat',
+//         backgroundAttachment: 'fixed',
+//         backgroundPosition: 'center',
+//         backgroundColor: 'rgba(255, 255, 255, 0.8)'}}
