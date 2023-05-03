@@ -6,15 +6,18 @@ import Register from '../Pages/Login/Register/Register';
 import Home from '../Pages/Home/Home/Home';
 import Blog from '../Pages/Blog/Blog';
 import Contact from '../Pages/Contact/Contact';
+import ErrorPage from '../Pages/Shared/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <ErrorPage></ErrorPage>,
       children:[
         {
             path: '/',
-            element: <Home></Home>
+            element: <Home></Home>,
+
         },
         {
             path: '/login',
@@ -28,10 +31,10 @@ const router = createBrowserRouter([
             path: '/blog',
             element: <Blog></Blog>
         },
-        {
-            path: '/contact',
-            element: <Contact></Contact>
-        }
+        // {
+        //     path: '/contact',
+        //     element: <Contact></Contact>
+        // }
       ]
       
     }
