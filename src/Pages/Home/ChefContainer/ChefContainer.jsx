@@ -1,19 +1,21 @@
 import React from 'react';
 import './ChefContainer.css'
+import { FaThumbsUp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const ChefContainer = ({chef}) => {
-    const {name, picture, description, likes, years_of_experience, recipes}=chef
+    const {id, name, picture, likes, years_of_experience, recipes}=chef
     console.log(chef)
     return (
         <div className="card card-compact w-96 bg-base-100 shadow-xl mx-auto">
                 <figure><img src={picture} alt="Shoes" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title">{name}</h2>
-                    <p>Has {years_of_experience} years of cooking experience</p>
-                    <p>Made {recipes.length} different recipes</p>
-                    <p>Likes: {likes}</p>
+                    <h2 className="card-title text-2xl">{name}</h2>
+                    <p className='text-left'>Has {years_of_experience} years of cooking experience</p>
+                    <p className='text-left'>Made {recipes.length} different recipes</p>
+                    <p className='flex justify-start items-center gap-2'><FaThumbsUp className='text-blue-700'/> {likes}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">View recipes</button>
+                        <button className="btn btn-primary"><Link to={`${id}`}>View recipes</Link></button>
                     </div>
                 </div>
             </div>

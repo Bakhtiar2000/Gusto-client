@@ -3,21 +3,21 @@ import './Home.css'
 import ChefContainer from '../ChefContainer/ChefContainer';
 import Banner from '../Banner/Banner';
 import BestRecipe from '../BestRecipe/BestRecipe';
-import CustomerReview from '../CustomerReview/CustomerReview';
 import { useLoaderData } from 'react-router-dom';
+import CustomerReview from '../CustomerReview/CustomerReview';
 
 const Home = () => {
     const chefs = useLoaderData()
     console.log(chefs)
     return (
-        <div className='home'>
+        <div className='home pb-16'>
 
             <Banner></Banner>
             <div className='home-container'>
                 <div className='text-center my-20 ms-10 me-10'>
-                    <h2 className='text-3xl font-extrabold text-white'>Our Chefs</h2>
-                    <p className='my-5 text-white stroke-black'>Meet our most experienced chefs and explore what they can provide you</p>
-                    <div className='chefs'>
+                    <h2 className='md:text-6xl text-4xl  font-semibold text-white'>Our Chefs</h2>
+                    <p className='my-5 text-white md:text-xl text-md mb-16'>Meet our most experienced chefs and explore what they can provide you</p>
+                    <div className='chefs lg:px-10'>
                         {
                             chefs.map(chef => <ChefContainer
                                 key={chef.id} chef={chef}
@@ -33,8 +33,3 @@ const Home = () => {
 };
 
 export default Home;
-// style={{backgroundImage: `url(../../../../public/assets/icons/Gusto Restaurant Front View.png)`,
-//         backgroundRepeat: 'no-repeat',
-//         backgroundAttachment: 'fixed',
-//         backgroundPosition: 'center',
-//         backgroundColor: 'rgba(255, 255, 255, 0.8)'}}
