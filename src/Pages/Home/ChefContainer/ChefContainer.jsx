@@ -1,69 +1,22 @@
 import React from 'react';
 import './ChefContainer.css'
 
-const ChefContainer = () => {
+const ChefContainer = ({chef}) => {
+    const {name, picture, description, likes, years_of_experience, recipes}=chef
+    console.log(chef)
     return (
-        <div className='text-center my-20 ms-10 me-10'>
-            <h2 className='text-3xl font-extrabold text-white'>Our Chefs</h2>
-            <p className='my-5 text-white stroke-black'>Meet our most experienced chefs and explore what they can provide you</p>
-            <div className='chefs'>
-            <div className="card card-compact w-96 bg-base-100 shadow-xl mx-auto">
-                <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+        <div className="card card-compact w-96 bg-base-100 shadow-xl mx-auto">
+                <figure><img src={picture} alt="Shoes" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <h2 className="card-title">{name}</h2>
+                    <p>Has {years_of_experience} years of cooking experience</p>
+                    <p>Made {recipes.length} different recipes</p>
+                    <p>Likes: {likes}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
-                    </div>
-                </div>
-            </div><div className="card card-compact w-96 bg-base-100 shadow-xl mx-auto">
-                <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                <div className="card-body">
-                    <h2 className="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
-                    </div>
-                </div>
-            </div><div className="card card-compact w-96 bg-base-100 shadow-xl mx-auto">
-                <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                <div className="card-body">
-                    <h2 className="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
-                    </div>
-                </div>
-            </div><div className="card card-compact w-96 bg-base-100 shadow-xl mx-auto">
-                <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                <div className="card-body">
-                    <h2 className="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
-                    </div>
-                </div>
-            </div><div className="card card-compact w-96 bg-base-100 shadow-xl mx-auto">
-                <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                <div className="card-body">
-                    <h2 className="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
-                    </div>
-                </div>
-            </div><div className="card card-compact w-96 bg-base-100 shadow-xl mx-auto">
-                <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                <div className="card-body">
-                    <h2 className="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
+                        <button className="btn btn-primary">View recipes</button>
                     </div>
                 </div>
             </div>
-            </div>
-        </div>
     );
 };
 
