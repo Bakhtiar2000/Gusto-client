@@ -5,11 +5,11 @@ const Footer = () => {
     return (
         <div className='bg-black text-white md:flex justify-around items-start p-5'>
             <div>
-                <p className='text-5xl mt-5 mb-10'>Gusto</p>
+                <p className='md:text-5xl text-3xl mt-5 md:mb-10 mb-5'>Gusto</p>
                 <p className='text-md my-2'>Address: 85 Kakoli, Banani, Dhaka</p>
                 <p className='text-md my-2'>Email: gustobanani@gmail.com</p>
                 <p className='text-md my-2'>Phone: +8801534288567</p>
-                <div className="links my-10">
+                <div className="links md:my-10 my-5">
                     <a href="https://www.facebook.com/"><img src="../../../../public/assets/icons/fb.png" alt=""/></a>
                     <a href="https://www.twitter.com/"><img src="../../../../public/assets/icons/twitter.png" alt=""/></a>
                     <a href="https://www.youtube.com/"><img src="../../../../public/assets/icons/youtube.png" alt=""/></a>
@@ -17,7 +17,7 @@ const Footer = () => {
 
             </div>
             <div className='mb-5'>
-            <h3 className="text-3xl my-5">Message us for reservation</h3>
+            <h3 className="md:text-3xl text-2xl my-5">Message us for reservation</h3>
             <form>
                 <input className='my-3 rounded p-3 ' type="text" placeholder="Your Name"/><br/>
                 <input className='my-3 rounded p-3 ' type="email" placeholder="Your Email"/><br/>

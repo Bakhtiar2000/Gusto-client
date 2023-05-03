@@ -45,7 +45,7 @@ const CustomerReview = () => {
   return (
     <div>
       <h2 className='md:text-5xl text-3xl text-center font-semibold text-white mb-10'>Word from our customers</h2 >
-      <div style={{ backgroundColor: '#212A3E' }} className="text-white text-center max-w-lg mx-auto rounded-2xl">
+      <div style={{ backgroundColor: '#212A3E' }} className="text-white text-center lg:max-w-lg md:max-w-md max-w-xs mx-auto rounded-2xl">
         <Slider {...settings}>
           {reviews.map((review) => (
             <div key={review.id} className="px-4 pt-8 pb-6">

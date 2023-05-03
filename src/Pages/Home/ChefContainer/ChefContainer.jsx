@@ -7,7 +7,7 @@ const ChefContainer = ({chef}) => {
     const {id, name, picture, likes, years_of_experience, recipes}=chef
     console.log(chef)
     return (
-        <div className="card card-compact w-96 bg-base-100 shadow-xl mx-auto">
+        <div className="card card-compact md:w-96 w-54 bg-base-100 shadow-xl mx-auto">
                 <figure><img src={picture} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title text-2xl">{name}</h2>

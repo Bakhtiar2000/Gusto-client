@@ -27,7 +27,7 @@ const Header = () => {
     };
 
     return (
-        <div className="navbar bg-base-100 pe-8 py-4">
+        <div className="navbar bg-base-100 pe-8 py-4 max-w-screen-2xl mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -39,7 +39,7 @@ const Header = () => {
                         <ActiveLink to='/blog'>Blog</ActiveLink>
                     </nav>
                 </div>
-                <a className="title text-3xl">Gusto</a>
+                <a className="title md:text-4xl text-2xl font-semibold">Gusto</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <nav className="menu menu-horizontal px-1 gap-5 flex items-center">
