@@ -12,11 +12,11 @@ const Recipe = () => {
             <div className='md:flex items-center gap-10 px-5 py-10'>
                 <img className='w-1/2 rounded-lg flex justify-center' src={picture} alt="" />
                 <div className='md:border-s-2 md:ps-5'>
-                <p className='text-4xl font-semibold my-5'>{name}</p>
+                <p className='text-4xl text-orange-500 font-semibold my-5'>{name}</p>
                 <p>{description}</p>
-                <p className='my-3'>Cooking experience: {years_of_experience} years</p>
-                    <p className='mb-3'>Recipes made: {recipes.length}</p>
-                    <p className='flex justify-start items-center gap-2'><FaThumbsUp className='text-blue-700'/> {likes}</p>
+                <p className='my-3'><span className='font-semibold'>Cooking experience: </span>{years_of_experience} years</p>
+                    <p className='mb-3'><span className='font-semibold'>Recipes made: </span>{recipes.length}</p>
+                    <p className='flex justify-start items-center gap-2'><FaThumbsUp className='text-orange-500 '/> {likes}</p>
                 </div>
 
             </div>

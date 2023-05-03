@@ -7,7 +7,7 @@ import { AuthContext } from '../../../Providers/AuthProvider';
 const Header = () => {
     const [showText, setShowText] = useState(false);
     const { user, logOut, loading } = useContext(AuthContext)
-    if(user){
+    if (user) {
         console.log(user.photoURL)
     }
     const handleLogOut = () => {
@@ -52,14 +52,8 @@ const Header = () => {
                 {
                     user ?
                         <>
-                            <div className='' style={{ position: 'relative' }}>
-                                <img src={user.photoURL} className='rounded-full w-1/3' onMouseOver={handleMouseOver}
-                                    onMouseOut={handleMouseOut} />
-                                {showText && <p style={{
-                                    position: 'absolute',
-                                    top: '-50%',
-                                    right: '150%',
-                                }}>{user.displayName}</p>}
+                            <div className="tooltip flex justify-center" data-tip={user.displayName}>
+                                <img src={user.photoURL} className='rounded-full w-2/5' />
                             </div>
                             <button className='btn bg-orange-500 border-0 font-semibold' onClick={handleLogOut}>Logout</button>
                         </> :
