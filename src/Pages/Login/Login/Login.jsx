@@ -1,11 +1,15 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProvider';
 import { FaGoogle, FaGithub } from 'react-icons/fa';
 
 const Login = () => {
 
-    const { signIn, signInWithGoogle } = useContext(AuthContext)
+    const { signIn, signInWithGoogle, signInWithGithub } = useContext(AuthContext)
+    const navigate= useNavigate()
+    const location= useLocation()
+    const from= location.state?.from?.pathname || '/'
+    console.log(from)
     const [success, setSuccess] = useState('')
     const [error, setError] = useState('')
 
@@ -24,6 +28,7 @@ const Login = () => {
                 console.log(loggedUser)
                 setSuccess('Login Successful')
                 form.reset()
+                navigate(from, {replace: true})
             })
             .catch(err => setError(err.message))
     }
@@ -35,6 +40,19 @@ const Login = () => {
                 console.log(loggedUser)
                 setSuccess('Login Successful')
                 form.reset()
+                navigate(from, {replace: true})
+            })
+            .catch(err => setError(err.message))
+    }
+
+    const handleSignInWithGithub = () => {
+        signInWithGithub()
+            .then(result => {
+                const loggedUser = result.user
+                console.log(loggedUser)
+                setSuccess('Login Successful')
+                form.reset()
+                navigate(from, {replace: true})
             })
             .catch(err => setError(err.message))
     }
@@ -82,7 +100,7 @@ const Login = () => {
                         <span className='text-xs mt-0'>New to Gusto? please<button className="btn btn-link text-xs"><Link to="/register">Register</Link></button></span>
                     </div>
                     <button onClick={handleSignInWithGoogle} className="btn btn-outline btn-primary mt-5"><FaGoogle /><span className='ms-3'> Login with google</span></button> <br />
-                    <button className="btn btn-outline btn-primary mt-5"><FaGithub /><span className='ms-3'> Login with github</span></button>
+                    <button onClick={handleSignInWithGithub} className="btn btn-outline btn-primary mt-5"><FaGithub /><span className='ms-3'> Login with github</span></button>
                 </div>
             </div>
         </div>

@@ -61,9 +61,9 @@ const Header = () => {
                                     right: '150%',
                                 }}>{user.displayName}</p>}
                             </div>
-                            <button className='btn' onClick={handleLogOut}>Logout</button>
+                            <button className='btn bg-orange-500 border-0 font-semibold' onClick={handleLogOut}>Logout</button>
                         </> :
-                        <button className='btn'> <Link to='/login'>Login</Link></button>
+                        <button className='btn bg-orange-500 border-0 font-semibold'> <Link to='/login'>Login</Link></button>
                 }
 
             </div>

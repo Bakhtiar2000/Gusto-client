@@ -6,7 +6,7 @@ const Footer = () => {
         <div className='bg-black text-white md:flex justify-around items-start p-5'>
             <div>
                 <p className='text-5xl mt-5 mb-10'>Gusto</p>
-                <p className='text-md my-2'>Address:</p>
+                <p className='text-md my-2'>Address: 85 Kakoli, Banani, Dhaka</p>
                 <p className='text-md my-2'>Email: gustobanani@gmail.com</p>
                 <p className='text-md my-2'>Phone: +8801534288567</p>
                 <div className="links my-10">
