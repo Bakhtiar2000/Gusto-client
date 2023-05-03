@@ -9,7 +9,7 @@ const Footer = () => {
                 <p className='text-md my-2'>Address:</p>
                 <p className='text-md my-2'>Email: gustobanani@gmail.com</p>
                 <p className='text-md my-2'>Phone: +8801534288567</p>
-                <div class="links my-10">
+                <div className="links my-10">
                     <a href="https://www.facebook.com/"><img src="../../../../public/assets/icons/fb.png" alt=""/></a>
                     <a href="https://www.twitter.com/"><img src="../../../../public/assets/icons/twitter.png" alt=""/></a>
                     <a href="https://www.youtube.com/"><img src="../../../../public/assets/icons/youtube.png" alt=""/></a>
@@ -17,11 +17,11 @@ const Footer = () => {
 
             </div>
             <div className='mb-5'>
-            <h3 class="text-3xl my-5">Message us for reservation</h3>
+            <h3 className="text-3xl my-5">Message us for reservation</h3>
             <form>
-                <input className='my-3 rounded p-3 ' type="text" name="" id="" placeholder="Your Name"/><br/>
-                <input className='my-3 rounded p-3 ' type="email" name="" id="" placeholder="Your Email"/><br/>
-                <textarea className='my-3 rounded p-3 ' name="" id="" cols="35" rows="5" placeholder="Message"></textarea><br/>
+                <input className='my-3 rounded p-3 ' type="text" placeholder="Your Name"/><br/>
+                <input className='my-3 rounded p-3 ' type="email" placeholder="Your Email"/><br/>
+                <textarea className='my-3 rounded p-3 ' cols="35" rows="5" placeholder="Message"></textarea><br/>
                 <input  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded " type="submit" value="Submit"/>
             </form>
             </div>
