@@ -5,26 +5,13 @@ import { AuthContext } from '../../../Providers/AuthProvider';
 
 
 const Header = () => {
-    const [showText, setShowText] = useState(false);
-    const { user, logOut, loading } = useContext(AuthContext)
-    if (user) {
-        console.log(user.photoURL)
-    }
+    const { user, logOut } = useContext(AuthContext)
+
     const handleLogOut = () => {
         logOut()
             .then()
             .catch(err => console.log(err.message))
     }
-
-    if (loading) return <span className='loading'></span>
-
-    const handleMouseOver = () => {
-        setShowText(true);
-    };
-
-    const handleMouseOut = () => {
-        setShowText(false);
-    };
 
     return (
         <div className="navbar bg-base-100 pe-8 py-4 max-w-screen-2xl mx-auto">
@@ -52,8 +39,8 @@ const Header = () => {
                 {
                     user ?
                         <>
-                            <div className="tooltip flex justify-center" data-tip={user.displayName}>
-                                <img src={user.photoURL} className='rounded-full w-2/5' />
+                            <div className="tooltip flex justify-center" data-tip={user?.displayName}>
+                                <img src={user?.photoURL} className='rounded-full w-2/5' />
                             </div>
                             <button className='btn bg-orange-500 border-0 font-semibold' onClick={handleLogOut}>Logout</button>
                         </> :

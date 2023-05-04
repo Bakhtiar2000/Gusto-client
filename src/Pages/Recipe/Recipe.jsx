@@ -9,7 +9,7 @@ const Recipe = () => {
     const {id, name, description, picture, likes, years_of_experience, recipes,}= loader
     return (
         <div className='my-16 max-w-7xl mx-auto'>
-            <div className='md:flex items-center gap-10 px-5 py-10'>
+            <div className='md:flex items-center gap-10 px-5 py-7 md:border-2 border-orange-300 rounded-lg mb-8'>
                 <img className='w-1/2 rounded-lg flex justify-center' src={picture} alt="" />
                 <div className='md:border-s-2 md:ps-5'>
                 <p className='text-4xl text-orange-500 font-semibold my-5'>{name}</p>

@@ -5,12 +5,16 @@ import { FaRegBookmark, FaLongArrowAltRight } from 'react-icons/fa';
 import toast, { Toaster } from 'react-hot-toast';
 
 const RecipeDetails = ({ recipe }) => {
+    const [disabled, setDisabled] = useState(false);
+    const { name, cooking_method, ingredients, rating } = recipe
+
     const handleClick= () =>{
         toast.success('Recipe added as favourite');
+        setDisabled(true);
     }
-    const { name, cooking_method, ingredients, rating } = recipe
+   
     return (
-        <div className="card w-96 bg-base-100 shadow-xl mb-10">
+        <div className="card w-96 bg-base-100 shadow-xl mb-10 bg-slate-50">
             <div className="card-body pb-4">
                 <h2 className="card-title ">{name}</h2>
                 <hr />
@@ -28,7 +32,7 @@ const RecipeDetails = ({ recipe }) => {
                         <span className='ms-2'>{rating}</span>
                     </div>
                     <div>
-                    <FaRegBookmark onClick={handleClick}/>
+                   <button className='btn btn-ghost' onClick={handleClick} disabled={disabled}> <FaRegBookmark /></button>
                     <Toaster />
                     </div>
                     
@@ -40,17 +44,3 @@ const RecipeDetails = ({ recipe }) => {
 };
 
 export default RecipeDetails;
-
-
-{/* <div>
-            <p className='text-4xl font-semibold my-5'>{name}</p>
-            <p className='mb-3'>{cooking_method}</p>
-            <p>Ingredients:</p>
-            <ul>
-            {
-                ingredients.map(ingredient=> <li>{ingredient}</li>)
-            }
-            </ul>
-            <Rating style={{ maxWidth: 100 }} value={Math.round(rating?.number || 0)} readOnly />
-                    <span className='ms-2'>{rating?.number}</span>
-        </div> */}
