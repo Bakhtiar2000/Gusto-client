@@ -10,9 +10,9 @@ const Footer = () => {
                 <p className='text-md my-2'>Email: gustobanani@gmail.com</p>
                 <p className='text-md my-2'>Phone: +8801534288567</p>
                 <div className="links md:my-10 my-5">
-                    <a href="https://www.facebook.com/"><img src="../../../../public/assets/icons/fb.png" alt=""/></a>
-                    <a href="https://www.twitter.com/"><img src="../../../../public/assets/icons/twitter.png" alt=""/></a>
-                    <a href="https://www.youtube.com/"><img src="../../../../public/assets/icons/youtube.png" alt=""/></a>
+                    <a href="https://www.facebook.com/"><img src="./assets/icons/fb.png" alt=""/></a>
+                    <a href="https://www.twitter.com/"><img src="./assets/icons/twitter.png" alt=""/></a>
+                    <a href="https://www.youtube.com/"><img src="./assets/icons/youtube.png" alt=""/></a>
                 </div>
 
             </div>

@@ -40,7 +40,7 @@ const Header = () => {
                     user ?
                         <>
                             <div className="tooltip flex justify-center" data-tip={user?.displayName}>
-                                <img src={user?.photoURL} className='rounded-full w-2/5' />
+                                <img src={user?.photoURL} className='rounded-full w-2/5 max-w-xs' />
                             </div>
                             <button className='btn bg-orange-500 border-0 font-semibold' onClick={handleLogOut}>Logout</button>
                         </> :

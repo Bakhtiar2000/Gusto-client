@@ -27,8 +27,8 @@ const Login = () => {
                 const loggedUser = result.user
                 console.log(loggedUser)
                 setSuccess('Login Successful')
-                form.reset()
                 navigate(from, {replace: true})
+                form.reset()
             })
             .catch(err => setError(err.message))
     }
@@ -39,10 +39,10 @@ const Login = () => {
                 const loggedUser = result.user
                 console.log(loggedUser)
                 setSuccess('Login Successful')
-                form.reset()
                 navigate(from, {replace: true})
+                form.reset()
             })
-            .catch(err => setError(err.message))
+            .catch(err => console.log(err.message))
     }
 
     const handleSignInWithGithub = () => {
@@ -51,10 +51,10 @@ const Login = () => {
                 const loggedUser = result.user
                 console.log(loggedUser)
                 setSuccess('Login Successful')
-                form.reset()
                 navigate(from, {replace: true})
+                form.reset()
             })
-            .catch(err => setError(err.message))
+            .catch(err => console.log(err.message))
     }
 
     if (error == 'Firebase: Error (auth/wrong-password).') {
@@ -67,11 +67,11 @@ const Login = () => {
             <div className="hero-content flex-col">
                 <div className="text-center">
                     <div className='flex justify-center items-start gap-8'>
-                        <img style={{ width: '40px' }} src="../../../../public/assets/icons/Restaurant-1.png" alt="" />
-                        <img style={{ width: '40px' }} src="../../../../public/assets/icons/Restaurant-2.png" alt="" />
-                        <img style={{ width: '40px' }} src="../../../../public/assets/icons/Restaurant-3.png" alt="" />
-                        <img style={{ width: '40px' }} src="../../../../public/assets/icons/Restaurant-4.png" alt="" />
-                        <img style={{ width: '40px' }} src="../../../../public/assets/icons/Restaurant-5.png" alt="" />
+                        <img style={{ width: '40px' }} src="./assets/icons/Restaurant-1.png" alt="" />
+                        <img style={{ width: '40px' }} src="./assets/icons/Restaurant-2.png" alt="" />
+                        <img style={{ width: '40px' }} src="./assets/icons/Restaurant-3.png" alt="" />
+                        <img style={{ width: '40px' }} src="./assets/icons/Restaurant-4.png" alt="" />
+                        <img style={{ width: '40px' }} src="./assets/icons/Restaurant-5.png" alt="" />
                     </div>
                     <h1 className="text-5xl font-bold my-5">Login now!</h1>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -80,13 +80,13 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+                                <input type="email" name="email" placeholder="email" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+                                <input type="password" name="password" placeholder="password" className="input input-bordered" />
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>

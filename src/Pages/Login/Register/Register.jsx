@@ -46,11 +46,11 @@ const Register = () => {
             <div className="hero-content flex-col">
                 <div className="text-center">
                 <div className='flex justify-center items-start gap-8'>
-                        <img style={{ width: '40px' }} src="../../../../public/assets/icons/Restaurant-1.png" alt="" />
-                        <img style={{ width: '40px' }} src="../../../../public/assets/icons/Restaurant-2.png" alt="" />
-                        <img style={{ width: '40px' }} src="../../../../public/assets/icons/Restaurant-3.png" alt="" />
-                        <img style={{ width: '40px' }} src="../../../../public/assets/icons/Restaurant-4.png" alt="" />
-                        <img style={{ width: '40px' }} src="../../../../public/assets/icons/Restaurant-5.png" alt="" />
+                        <img style={{ width: '40px' }} src="./assets/icons/Restaurant-1.png" alt="" />
+                        <img style={{ width: '40px' }} src="./assets/icons/Restaurant-2.png" alt="" />
+                        <img style={{ width: '40px' }} src="./assets/icons/Restaurant-3.png" alt="" />
+                        <img style={{ width: '40px' }} src="./assets/icons/Restaurant-4.png" alt="" />
+                        <img style={{ width: '40px' }} src="./assets/icons/Restaurant-5.png" alt="" />
                     </div>
                     <h1 className="text-5xl font-bold my-5">Please Register!</h1>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">

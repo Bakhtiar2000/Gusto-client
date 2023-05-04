@@ -4,21 +4,21 @@ const bestRecipes = [
     {
         id: 1,
         name: 'Carbonara',
-        img: "../../../../public/assets/platter-1.png",
+        img: "./assets/platter-1.png",
         reviews: 344,
         price: 80
     },
     {
         id: 2,
         name: 'Tiramisu',
-        img: "../../../../public/assets/platter-2.png",
+        img: "./assets/platter-2.png",
         reviews: 284,
         price: 65
     },
     {
         id: 3,
         name: 'Osso Buco',
-        img: "../../../../public/assets/platter-3.png",
+        img: "./assets/platter-3.png",
         reviews: 329,
         price: 88
     },
@@ -36,14 +36,14 @@ const BestRecipe = () => {
                     <div className='flex justify-evenly items-center my-16'>
                         <img className='w-1/2 rounded-lg border-2 border-blue-500' src={bestRecipes[0].img} alt="" />
                         <div className='text-white p-5 md:border-s-2 border-blue-800'>
-                            <p className='md:text-4xl text-3xl mb-5'>{bestRecipes[0].name}</p>
+                            <p className='md:text-4xl text-2xl mb-5'>{bestRecipes[0].name}</p>
                             <p className='mb-2'>Reviews: {bestRecipes[0].reviews}</p>
                             <p>Price: ${bestRecipes[0].price}</p>
                         </div>
                     </div>
                     <div className='flex justify-evenly items-center my-16'>                     
                         <div className='text-white p-5 md:border-e-2 border-blue-800'>
-                            <p className='md:text-4xl text-3xl mb-5'>{bestRecipes[1].name}</p>
+                            <p className='md:text-4xl text-2xl mb-5'>{bestRecipes[1].name}</p>
                             <p className='mb-2'>Reviews: {bestRecipes[1].reviews}</p>
                             <p>Price: ${bestRecipes[1].price}</p>
                         </div>
@@ -52,7 +52,7 @@ const BestRecipe = () => {
                     <div className='flex justify-evenly items-center my-16'>
                         <img className='w-1/2 rounded-lg border-2 border-blue-500' src={bestRecipes[2].img} alt="" />
                         <div className='text-white p-5 md:border-s-2 border-blue-800'>
-                            <p className='md:text-4xl text-3xl mb-5'>{bestRecipes[2].name}</p>
+                            <p className='md:text-4xl text-2xl mb-5'>{bestRecipes[2].name}</p>
                             <p className='mb-2'>Reviews: {bestRecipes[2].reviews}</p>
                             <p>Price: ${bestRecipes[2].price}</p>
                         </div>
