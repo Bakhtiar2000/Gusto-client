@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
-import { FaRegBookmark, FaLongArrowAltRight } from 'react-icons/fa';
+import { FaRegHeart, FaLongArrowAltRight } from 'react-icons/fa';
 import toast, { Toaster } from 'react-hot-toast';
 
 const RecipeDetails = ({ recipe }) => {
@@ -9,7 +9,7 @@ const RecipeDetails = ({ recipe }) => {
     const { name, cooking_method, ingredients, rating } = recipe
 
     const handleClick= () =>{
-        toast.success('Recipe added as favourite');
+        toast.success('Recipe added as favorite');
         setDisabled(true);
     }
    
@@ -32,7 +32,7 @@ const RecipeDetails = ({ recipe }) => {
                         <span className='ms-2'>{rating}</span>
                     </div>
                     <div>
-                   <button className='btn btn-ghost' onClick={handleClick} disabled={disabled}> <FaRegBookmark /></button>
+                   <button className='btn btn-ghost' onClick={handleClick} disabled={disabled}> <FaRegHeart /></button>
                     <Toaster />
                     </div>
                     
