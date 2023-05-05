@@ -8,7 +8,7 @@ const ChefContainer = ({ chef }) => {
     const { id, name, picture, likes, years_of_experience, recipes } = chef
     console.log(chef)
     return (
-        <div className="card card-compact md:w-96 w-54 bg-base-100 shadow-xl mx-auto">
+        <div className="card card-compact xl:w-92 lg:w-70 w-54 bg-base-100 shadow-xl mx-auto">
             <figure>
                 <LazyLoad>
                     <img src={picture} alt="Shoes" />

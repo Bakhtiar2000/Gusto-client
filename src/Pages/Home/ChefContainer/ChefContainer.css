@@ -1,7 +1,8 @@
 .chefs{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 30px;
+    row-gap: 20px;
+    column-gap: 20px;
 }
 
 /*phone devices*/
