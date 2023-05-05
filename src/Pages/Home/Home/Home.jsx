@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Home.css'
 import ChefContainer from '../ChefContainer/ChefContainer';
 import Banner from '../Banner/Banner';
@@ -9,10 +9,17 @@ import CustomerReview from '../CustomerReview/CustomerReview';
 const Home = () => {
     const chefs = useLoaderData()
     console.log(chefs)
+
+    const section2Ref = useRef(null);
+    const scrollToSection = (sectionRef) => {
+        sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
+
+
     return (
         <div className='home pb-16'>
 
-            <Banner></Banner>
+            <Banner scrollToSection={scrollToSection}></Banner>
             <div className='home-container'>
                 <div className='text-center my-20 ms-10 me-10'>
                     <h2 className='md:text-6xl text-4xl  font-semibold text-white'>Our Chefs</h2>
@@ -25,7 +32,7 @@ const Home = () => {
                         }
                     </div>
                 </div>
-                <BestRecipe></BestRecipe>
+                <BestRecipe section2Ref={section2Ref}></BestRecipe>
                 <CustomerReview></CustomerReview>
             </div>
         </div>

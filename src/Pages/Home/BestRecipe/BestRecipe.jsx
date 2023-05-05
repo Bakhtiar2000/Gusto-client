@@ -24,9 +24,10 @@ const bestRecipes = [
     },
 ]
 
-const BestRecipe = () => {
+const BestRecipe = ({section2Ref}) => {
+
     return (
-        <div>
+        <div ref={section2Ref}>
             <div className=' my-20 ms-10 me-10'>
                 <h2 className='md:text-6xl text-4xl text-center font-semibold text-white'>Best Recipes</h2>
                 <p className='my-5 text-white text-center md:text-xl text-md'>Enjoy the best of italian taste </p>
@@ -41,7 +42,7 @@ const BestRecipe = () => {
                             <p>Price: ${bestRecipes[0].price}</p>
                         </div>
                     </div>
-                    <div className='flex justify-evenly items-center my-16'>                     
+                    <div className='flex justify-evenly items-center my-16'>
                         <div className='text-white p-5 md:border-e-2 border-blue-800'>
                             <p className='md:text-4xl text-2xl mb-5'>{bestRecipes[1].name}</p>
                             <p className='mb-2'>Reviews: {bestRecipes[1].reviews}</p>

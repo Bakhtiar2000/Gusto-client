@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProvider';
-import { FaGoogle, FaGithub } from 'react-icons/fa';
+import { FaGoogle, FaGithub, FaEye } from 'react-icons/fa';
 
 const Login = () => {
 
@@ -12,6 +12,11 @@ const Login = () => {
     console.log(from)
     const [success, setSuccess] = useState('')
     const [error, setError] = useState('')
+    const [show, setShow]= useState(false)
+
+    const handlePasswordToggle= ()=>{
+        setShow(!show)
+    }
 
     const handleLogin = event => {
         event.preventDefault()
@@ -82,15 +87,18 @@ const Login = () => {
                                 </label>
                                 <input type="email" name="email" placeholder="email" className="input input-bordered" />
                             </div>
+
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" name="password" placeholder="password" className="input input-bordered" />
+                                <input type={show? 'text': 'password'} name="password" placeholder="password" className="input input-bordered relative" />
+                                <FaEye onClick={handlePasswordToggle} className='absolute top-44 right-12 text-slate-500 hover:text-slate-700'/>
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
+
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
                             </div>

@@ -8,7 +8,7 @@ const Recipe = () => {
     console.log(loader)
     const {id, name, description, picture, likes, years_of_experience, recipes,}= loader
     return (
-        <div className='my-16 max-w-7xl mx-auto'>
+        <div className='my-16 max-w-7xl mx-auto px-5'>
             <div className='md:flex items-center gap-10 px-5 py-7 md:border-2 border-orange-300 rounded-lg mb-8'>
                 <img className='w-1/2 rounded-lg flex justify-center' src={picture} alt="" />
                 <div className='md:border-s-2 md:ps-5'>
@@ -20,7 +20,7 @@ const Recipe = () => {
                 </div>
 
             </div>
-            <div className='md:flex items-start justify-evenly'>
+            <div className='lg:flex items-start justify-evenly gap-5'>
                 {
                     recipes.map(recipe=><RecipeDetails
                         key={recipe._id}

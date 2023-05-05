@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useRef } from 'react';
 import ActiveLink from '../ActiveLink/ActiveLink';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProvider';
@@ -6,7 +6,6 @@ import { AuthContext } from '../../../Providers/AuthProvider';
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext)
-
     const handleLogOut = () => {
         logOut()
             .then()
